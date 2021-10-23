@@ -21,7 +21,7 @@ The following code chunk have the essential libraries for the subsequent code.
 library(tidyverse)
 library(tidytuesdayR)
 
-tuesdaydata <- tt_load("2021-10-26")
+# tuesdaydata <- tt_load("2021-10-26")
 
 # df <- tuesdaydata$
 ```
@@ -40,7 +40,7 @@ tuesdaydata <- tt_load("2021-10-26")
 
 ```
 
-## Andres
+## Andrés
 
 ```{r}
 
@@ -52,7 +52,7 @@ tuesdaydata <- tt_load("2021-10-26")
 
 ```
 
-## Maria Jose
+## Maria José
 
 ```{r}
 

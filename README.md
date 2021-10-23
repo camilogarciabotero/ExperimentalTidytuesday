@@ -11,22 +11,26 @@ This activity looks forward to the students to familiarize with git,
 github and tidyverse tools, having a question as a central axis.
 
 The following code chunk have the essential libraries for the subsequent
-coude.
+code.
 
 ``` r
 library(tidyverse)
 library(tidytuesdayR)
+
+# tuesdaydata <- tt_load("2021-10-26")
+
+# df <- tuesdaydata$
 ```
 
 ## Alexandra
 
 ## Amalia
 
-## Andres
+## Andrés
 
 ## Manuela
 
-## Maria Jose
+## Maria José
 
 ## Pablo
 
