@@ -1,73 +1,12 @@
 ---
 title: "Experimental TidyTuesday"
 output: github_document
-bibliography: packages.bib
-nocite: "@*"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, fig.align = "center", cache = FALSE)
-
-knitr::write_bib(renv::dependencies()$Package, file = "packages.bib") # Line to write the all packages references in a file called packages.bib
 ```
-
 
 This repo will host the code and figures from students of the experimental biology course at from EAFIT university, who are exploring a [TidyTuesday](https://github.com/rfordatascience/tidytuesday) dataset as a course activity. Each student will inquire the selected dataset, and with [tidyverse](https://www.tidyverse.org) tools will aim to solve its question.
 
 This activity looks forward to the students to familiarize with git, github and tidyverse tools, having a question as a central axis.
-
-The following code chunk have the essential libraries for the subsequent code.
-```{r libraries, warning=FALSE, message=FALSE}
-library(tidyverse)
-library(tidytuesdayR)
-
-tuesdaydata <- tt_load("2021-10-19")
-
-pumpkins <- tuesdaydata$pumpkins
-```
-
-
-## Alexandra
-
-```{r Alexandra}
-
-```
-
-
-## Amalia
-
-```{r Amalia}
-
-```
-
-## Andrés
-
-```{r Andres}
-
-```
-
-## Manuela
-
-```{r Manuela}
-
-```
-
-## Maria José
-
-```{r MariaJose}
-
-```
-
-## Pablo
-
-```{r Pablo}
-
-```
-
-## Susana
-
-```{r Susana}
-
-```
-
-# References
