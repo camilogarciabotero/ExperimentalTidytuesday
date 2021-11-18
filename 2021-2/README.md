@@ -5,13 +5,15 @@ The following code chunk have the essential libraries for the subsequent
 code.
 
 ``` r
-library(tidyverse)
+library(tidyverse, warn.conflicts = FALSE)
 library(tidytuesdayR)
 
-# tuesdaydata <- tt_load("2021-10-19")
-
-# pumpkins <- tuesdaydata$pumpkins
+tuesdata <- tidytuesdayR::tt_load(2021, week = 44)
 ```
+
+    ## 
+    ##  Downloading file 1 of 2: `ultra_rankings.csv`
+    ##  Downloading file 2 of 2: `race.csv`
 
 ## Alexandra
 
