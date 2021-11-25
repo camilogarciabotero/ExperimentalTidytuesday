@@ -43,7 +43,14 @@ tuesdata <- tidytuesdayR::tt_load(2021, week = 44)
 ## Manuela
 
 ```{r Manuela}
+library(report)
 
+rankings <-  tuesdata$ultra_rankings
+
+rankings %>%
+  #summary() para visualizar datos
+#glimpse() otra manera de visualizar los datos
+report(rankings)
 ```
 
 ## Maria José
