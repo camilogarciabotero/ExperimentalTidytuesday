@@ -76,7 +76,14 @@ p + geom_point(aes(colour = factor(gender),shape =gender)) +
 ## Manuela
 
 ```{r Manuela}
+library(report)
 
+rankings <-  tuesdata$ultra_rankings
+
+rankings %>%
+  #summary() para visualizar datos
+#glimpse() otra manera de visualizar los datos
+report(rankings)
 ```
 
 ## Maria José
