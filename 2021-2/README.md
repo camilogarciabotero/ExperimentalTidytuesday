@@ -15,6 +15,8 @@ tuesdata <- tidytuesdayR::tt_load(2021, week = 44)
     ##  Downloading file 1 of 2: `ultra_rankings.csv`
     ##  Downloading file 2 of 2: `race.csv`
 
+Estudiantes:
+
 ## Alexandra
 
 ## Amalia
