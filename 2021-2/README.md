@@ -15,9 +15,23 @@ tuesdata <- tidytuesdayR::tt_load(2021, week = 44)
     ##  Downloading file 1 of 2: `ultra_rankings.csv`
     ##  Downloading file 2 of 2: `race.csv`
 
+``` r
+rankings <-  tuesdata$ultra_rankings
+```
+
 Estudiantes:
 
 ## Alexandra
+
+``` r
+# Make the histogram
+rankings %>%
+  filter( age<90 ) %>%
+  ggplot( aes(x=age)) +
+    geom_density(fill="#69b3a2", color="#e9ecef", alpha=0.8)
+```
+
+![](README_files/figure-gfm/Alexandra-1.png)<!-- -->
 
 ## Amalia
 
