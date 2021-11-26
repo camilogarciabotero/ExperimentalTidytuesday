@@ -18,6 +18,8 @@ library(tidyverse, warn.conflicts = FALSE)
 library(tidytuesdayR)
 
 tuesdata <- tidytuesdayR::tt_load(2021, week = 44)
+
+rankings <-  tuesdata$ultra_rankings
 ```
  
  Estudiantes:
@@ -25,7 +27,11 @@ tuesdata <- tidytuesdayR::tt_load(2021, week = 44)
 ## Alexandra
 
 ```{r Alexandra}
-
+# Make the histogram
+rankings %>%
+  filter( age<90 ) %>%
+  ggplot( aes(x=age)) +
+    geom_density(fill="#69b3a2", color="#e9ecef", alpha=0.8)
 ```
 
 
