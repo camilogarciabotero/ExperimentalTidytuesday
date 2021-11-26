@@ -73,22 +73,20 @@ p + geom_point(aes(colour = factor(gender),shape =gender)) +
 
 ```{r Pablo,warning=FALSE,message=FALSE}
 library(tidytuesdayR)
-library(report)
 
+# rankings <- tuesdata$ultra_rankings
 
-rankings <- tuesdata$ultra_rankings
-
-tuesdata$ultra_rankings
+# tuesdata$ultra_rankings
 
   
 
 # Libraries..
 
-library(hrbrthemes)
-library(dplyr)
-library(tidyr)
-library(viridis)
-library(ggplot2)
+# library(hrbrthemes)
+# library(dplyr)
+# library(tidyr)
+# library(viridis)
+# library(ggplot2)
 
 # Make the histogram....
 
