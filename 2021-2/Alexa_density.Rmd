@@ -1,0 +1,88 @@
+---
+title: "TidyTuesdays from 2021-2 class"
+output: github_document
+bibliography: packages.bib
+nocite: "@*"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+
+knitr::write_bib(renv::dependencies()$Package, file = "packages.bib") # Line to write the all packages references in a file called packages.bib
+```
+
+The following code chunk have the essential libraries for the subsequent code.
+```{r libraries, warning=FALSE, message=FALSE}
+library(tidyverse, warn.conflicts = FALSE)
+library(tidytuesdayR)
+
+tuesdata <- tidytuesdayR::tt_load(2021, week = 44)
+```
+
+
+## Alexandra
+
+```{r Alexandra}
+library(tidytuesdayR)
+library(report)
+library(ggplot2)
+
+rankings <- tuesdata$ultra_rankings
+
+tuesdata$ultra_rankings
+
+
+  
+# Libraries
+library(ggplot2)
+library(dplyr)
+
+
+
+# Make the histogram
+rankings %>%
+  filter( age<90 ) %>%
+  ggplot( aes(x=age)) +
+    geom_density(fill="#69b3a2", color="#e9ecef", alpha=0.8)
+
+```
+
+
+## Amalia
+
+```{r Amalia}
+
+```
+
+## Andrés
+
+```{r Andres}
+
+```
+
+## Manuela
+
+```{r Manuela}
+
+```
+
+## Maria José
+
+```{r MariaJose}
+
+```
+
+## Pablo
+
+```{r Pablo}
+
+```
+
+## Susana
+
+```{r Susana}
+
+```
+
+# References
