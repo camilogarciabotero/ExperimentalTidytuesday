@@ -15,11 +15,34 @@ tuesdata <- tidytuesdayR::tt_load(2021, week = 44)
     ##  Downloading file 1 of 2: `ultra_rankings.csv`
     ##  Downloading file 2 of 2: `race.csv`
 
+Estudiantes:
+
 ## Alexandra
 
 ## Amalia
 
 ## Andrés
+
+``` r
+library(report)
+
+rankings <-  tuesdata$ultra_rankings
+
+rankings_modified <- rankings %>%
+  mutate(time_in_hours = time_in_seconds / 3600)
+
+  
+
+p <- ggplot(rankings_modified, aes(x = time_in_hours, y = age))  
+p + geom_point(aes(colour = factor(gender),shape =gender)) +
+  labs(x='time (hr)', y = 'age' ) +
+    theme(legend.position = 'down' ) +
+  scale_fill_viridis_b()
+```
+
+    ## Warning: Removed 17819 rows containing missing values (geom_point).
+
+![](README_files/figure-gfm/Andres-1.png)<!-- -->
 
 ## Manuela
 
