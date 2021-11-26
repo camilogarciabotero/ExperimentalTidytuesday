@@ -84,7 +84,7 @@ library(viridis)
 ``` r
 library(ggplot2)
 
-# Make the histogram.
+# Make the histogram..
 
 #rankings %>%
   #mutate(time_in_hours = time_in_seconds / 3600)
