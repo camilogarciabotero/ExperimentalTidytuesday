@@ -71,8 +71,35 @@ p + geom_point(aes(colour = factor(gender),shape =gender)) +
 
 ## Pablo
 
-```{r Pablo}
+```{r Pablo,warning=FALSE,message=FALSE}
+library(tidytuesdayR)
+library(report)
 
+
+rankings <- tuesdata$ultra_rankings
+
+tuesdata$ultra_rankings
+
+  
+
+# Libraries..
+
+library(hrbrthemes)
+library(dplyr)
+library(tidyr)
+library(viridis)
+library(ggplot2)
+
+# Make the histogram....
+
+#rankings %>%
+  #mutate(time_in_hours = time_in_seconds / 3600)
+
+
+ p2 <- ggplot(data=rankings, aes(x=time_in_seconds, group=age, fill=age)) +
+    geom_density(adjust=1.5, alpha=0.4) +
+    theme_minimal()
+ p2
 ```
 
 ## Susana
