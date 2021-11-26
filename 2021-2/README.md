@@ -23,6 +23,27 @@ Estudiantes:
 
 ## Andrés
 
+``` r
+library(report)
+
+rankings <-  tuesdata$ultra_rankings
+
+rankings_modified <- rankings %>%
+  mutate(time_in_hours = time_in_seconds / 3600)
+
+  
+
+p <- ggplot(rankings_modified, aes(x = time_in_hours, y = age))  
+p + geom_point(aes(colour = factor(gender),shape =gender)) +
+  labs(x='time (hr)', y = 'age' ) +
+    theme(legend.position = 'down' ) +
+  scale_fill_viridis_b()
+```
+
+    ## Warning: Removed 17819 rows containing missing values (geom_point).
+
+![](README_files/figure-gfm/Andres-1.png)<!-- -->
+
 ## Manuela
 
 ## Maria José
@@ -48,6 +69,23 @@ Richard Iannone. 2021. *Rmarkdown: Dynamic Documents for r*.
 
 Hughes, Ellis. 2020. *tidytuesdayR: Access the Weekly TidyTuesday
 Project Dataset*. <https://github.com/thebioengineer/tidytuesdayR>.
+
+</div>
+
+<div id="ref-report2021" class="csl-entry">
+
+Makowski, Dominique, Mattan S. Ben-Shachar, Indrajeet Patil, and Daniel
+Lüdecke. 2021. “Automated Results Reporting as a Practical Tool to
+Improve Reproducibility and Methodological Best Practices Adoption.”
+*CRAN*. <https://github.com/easystats/report>.
+
+</div>
+
+<div id="ref-R-report" class="csl-entry">
+
+Makowski, Dominique, Daniel Lüdecke, Mattan S. Ben-Shachar, and
+Indrajeet Patil. 2021. *Report: Automated Reporting of Results and
+Statistical Models*. <https://easystats.github.io/report/>.
 
 </div>
 
