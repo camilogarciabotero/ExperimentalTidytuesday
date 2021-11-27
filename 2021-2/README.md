@@ -19,6 +19,23 @@ tuesdata <- tidytuesdayR::tt_load(2021, week = 44)
 
 ## Amalia
 
+``` r
+library(report)
+library(dplyr)
+library(ggsci)
+
+rankings <- tuesdata$ultra_rankings
+
+modified_rankings <- rankings %>%
+  mutate(time_in_minutes = time_in_seconds / 60)
+
+ggplot(modified_rankings , aes(x = time_in_minutes , fill = gender)) + geom_density(data = modified_rankings , alpha = 0.6) + theme_minimal() + labs(x = "Time in minutes", y = "Gender") + theme( legend.position = "left" , legend.title = element_blank()) + ggtitle("Proggress of gender vs time") + scale_fill_d3()
+```
+
+    ## Warning: Removed 17791 rows containing non-finite values (stat_density).
+
+![](README_files/figure-gfm/Amalia-1.png)<!-- -->
+
 ## Andrés
 
 ## Manuela
@@ -49,6 +66,23 @@ Project Dataset*. <https://github.com/thebioengineer/tidytuesdayR>.
 
 </div>
 
+<div id="ref-report2021" class="csl-entry">
+
+Makowski, Dominique, Mattan S. Ben-Shachar, Indrajeet Patil, and Daniel
+Lüdecke. 2021. “Automated Results Reporting as a Practical Tool to
+Improve Reproducibility and Methodological Best Practices Adoption.”
+*CRAN*. <https://github.com/easystats/report>.
+
+</div>
+
+<div id="ref-R-report" class="csl-entry">
+
+Makowski, Dominique, Daniel Lüdecke, Mattan S. Ben-Shachar, and
+Indrajeet Patil. 2021. *Report: Automated Reporting of Results and
+Statistical Models*. <https://easystats.github.io/report/>.
+
+</div>
+
 <div id="ref-R-renv" class="csl-entry">
 
 Ushey, Kevin. 2021. *Renv: Project Environments*.
@@ -69,6 +103,21 @@ Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy
 D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019.
 “Welcome to the <span class="nocase">tidyverse</span>.” *Journal of Open
 Source Software* 4 (43): 1686. <https://doi.org/10.21105/joss.01686>.
+
+</div>
+
+<div id="ref-R-dplyr" class="csl-entry">
+
+Wickham, Hadley, Romain François, Lionel Henry, and Kirill Müller. 2021.
+*Dplyr: A Grammar of Data Manipulation*.
+<https://CRAN.R-project.org/package=dplyr>.
+
+</div>
+
+<div id="ref-R-ggsci" class="csl-entry">
+
+Xiao, Nan. 2018. *Ggsci: Scientific Journal and Sci-Fi Themed Color
+Palettes for Ggplot2*. <https://CRAN.R-project.org/package=ggsci>.
 
 </div>
 
