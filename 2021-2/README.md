@@ -16,7 +16,11 @@ tuesdata <- tidytuesdayR::tt_load(2021, week = 44)
     ##  Downloading file 2 of 2: `race.csv`
 
 ``` r
+<<<<<<< HEAD
 rankings <- tuesdata$ultra_rankings
+=======
+rankings <-  tuesdata$ultra_rankings
+>>>>>>> amaliamunera-main
 ```
 
 Estudiantes:
@@ -31,9 +35,30 @@ rankings %>%
     geom_density(fill="#69b3a2", color="#e9ecef", alpha=0.8)
 ```
 
+<<<<<<< HEAD
 <img src="README_files/figure-gfm/Alexandra-1.png" style="display: block; margin: auto;" />
+=======
+![](README_files/figure-gfm/Alexandra-1.png)<!-- -->
+>>>>>>> amaliamunera-main
 
 ## Amalia
+
+``` r
+library(report)
+library(dplyr)
+library(ggsci)
+
+rankings <- tuesdata$ultra_rankings
+
+modified_rankings <- rankings %>%
+  mutate(time_in_minutes = time_in_seconds / 60)
+
+ggplot(modified_rankings , aes(x = time_in_minutes , fill = gender)) + geom_density(data = modified_rankings , alpha = 0.6) + theme_minimal() + labs(x = "Time in minutes", y = "Gender") + theme( legend.position = "left" , legend.title = element_blank()) + ggtitle("Proggress of gender vs time") + scale_fill_tron()
+```
+
+    ## Warning: Removed 17791 rows containing non-finite values (stat_density).
+
+![](README_files/figure-gfm/Amalia-1.png)<!-- -->
 
 ## Andrés
 
@@ -56,7 +81,11 @@ p + geom_point(aes(colour = factor(gender),shape =gender)) +
 
     ## Warning: Removed 17819 rows containing missing values (geom_point).
 
+<<<<<<< HEAD
 <img src="README_files/figure-gfm/Andres-1.png" style="display: block; margin: auto;" />
+=======
+![](README_files/figure-gfm/Andres-1.png)<!-- -->
+>>>>>>> amaliamunera-main
 
 ## Manuela
 
@@ -189,6 +218,7 @@ Statistical Models*. <https://easystats.github.io/report/>.
 
 </div>
 
+<<<<<<< HEAD
 <div id="ref-R-wesanderson" class="csl-entry">
 
 Ram, Karthik, and Hadley Wickham. 2018. *Wesanderson: A Wes Anderson
@@ -196,6 +226,8 @@ Palette Generator*. <https://github.com/karthik/wesanderson>.
 
 </div>
 
+=======
+>>>>>>> amaliamunera-main
 <div id="ref-R-renv" class="csl-entry">
 
 Ushey, Kevin. 2021. *Renv: Project Environments*.
@@ -226,6 +258,7 @@ Source Software* 4 (43): 1686. <https://doi.org/10.21105/joss.01686>.
 
 </div>
 
+<<<<<<< HEAD
 <div id="ref-R-ggplot2" class="csl-entry">
 
 Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen,
@@ -235,6 +268,8 @@ Grammar of Graphics*. <https://CRAN.R-project.org/package=ggplot2>.
 
 </div>
 
+=======
+>>>>>>> amaliamunera-main
 <div id="ref-R-dplyr" class="csl-entry">
 
 Wickham, Hadley, Romain François, Lionel Henry, and Kirill Müller. 2021.
@@ -243,6 +278,16 @@ Wickham, Hadley, Romain François, Lionel Henry, and Kirill Müller. 2021.
 
 </div>
 
+<<<<<<< HEAD
+=======
+<div id="ref-R-ggsci" class="csl-entry">
+
+Xiao, Nan. 2018. *Ggsci: Scientific Journal and Sci-Fi Themed Color
+Palettes for Ggplot2*. <https://CRAN.R-project.org/package=ggsci>.
+
+</div>
+
+>>>>>>> amaliamunera-main
 <div id="ref-knitr2014" class="csl-entry">
 
 Xie, Yihui. 2014. “Knitr: A Comprehensive Tool for Reproducible Research
