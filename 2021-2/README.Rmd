@@ -6,7 +6,7 @@ nocite: "@*"
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, fig.align = "center")
 
 
 knitr::write_bib(renv::dependencies()$Package, file = "packages.bib") # Line to write the all packages references in a file called packages.bib

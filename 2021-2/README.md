@@ -31,7 +31,7 @@ rankings %>%
     geom_density(fill="#69b3a2", color="#e9ecef", alpha=0.8)
 ```
 
-![](README_files/figure-gfm/Alexandra-1.png)<!-- -->
+<img src="README_files/figure-gfm/Alexandra-1.png" style="display: block; margin: auto;" />
 
 ## Amalia
 
@@ -56,7 +56,7 @@ p + geom_point(aes(colour = factor(gender),shape =gender)) +
 
     ## Warning: Removed 17819 rows containing missing values (geom_point).
 
-![](README_files/figure-gfm/Andres-1.png)<!-- -->
+<img src="README_files/figure-gfm/Andres-1.png" style="display: block; margin: auto;" />
 
 ## Manuela
 
@@ -71,15 +71,14 @@ rankings <- tuesdata$ultra_ranking
 rankings_modified <-mutate(rankings, time_in_hours=time_in_seconds/3600)
 
 ggplot(rankings_modified, aes (x=age, y=time_in_hours,fill=gender))+
-  geom_violin()+
-  scale_fill_viridis_d()
+  geom_violin()
 ```
 
     ## Warning: Removed 17791 rows containing non-finite values (stat_ydensity).
 
     ## Warning: position_dodge requires non-overlapping x intervals
 
-![](README_files/figure-gfm/MariaJose-1.png)<!-- -->
+<img src="README_files/figure-gfm/MariaJose-1.png" style="display: block; margin: auto;" />
 
 ## Pablo
 
@@ -112,7 +111,7 @@ library(tidytuesdayR)
  p2
 ```
 
-![](README_files/figure-gfm/Pablo-1.png)<!-- -->
+<img src="README_files/figure-gfm/Pablo-1.png" style="display: block; margin: auto;" />
 
 ## Susana
 
