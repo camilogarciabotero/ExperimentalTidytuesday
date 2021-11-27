@@ -77,6 +77,28 @@ p + geom_point(aes(colour = factor(gender),shape =gender)) +
 
 ## Manuela
 
+``` r
+library(report)
+
+rankings <-  tuesdata$ultra_rankings
+
+# rankings %>%
+# summary() para visualizar datos
+# glimpse() otra manera de visualizar los datos
+
+
+# report(rankings)
+
+ rankings_modified <- rankings %>% 
+   mutate(time_in_hours = time_in_seconds / 3600) %>% 
+   drop_na()
+  
+ggplot(rankings_modified, aes(x = time_in_hours, y = gender, fill=gender)) +
+  geom_violin()
+```
+
+<img src="README_files/figure-gfm/Manuela-1.png" style="display: block; margin: auto;" />
+
 ## Maria José
 
 ## Pablo
