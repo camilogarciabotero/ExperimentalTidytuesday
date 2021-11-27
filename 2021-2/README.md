@@ -62,6 +62,25 @@ p + geom_point(aes(colour = factor(gender),shape =gender)) +
 
 ## Maria José
 
+``` r
+library(ggplot2)
+library(dplyr)
+
+rankings <- tuesdata$ultra_ranking
+
+rankings_modified <-mutate(rankings, time_in_hours=time_in_seconds/3600)
+
+ggplot(rankings_modified, aes (x=age, y=time_in_hours,fill=gender))+
+  geom_violin()+
+  scale_fill_viridis_d()
+```
+
+    ## Warning: Removed 17791 rows containing non-finite values (stat_ydensity).
+
+    ## Warning: position_dodge requires non-overlapping x intervals
+
+![](README_files/figure-gfm/MariaJose-1.png)<!-- -->
+
 ## Pablo
 
 ``` r
@@ -141,10 +160,17 @@ Ushey, Kevin. 2021. *Renv: Project Environments*.
 
 </div>
 
+<div id="ref-ggplot22016" class="csl-entry">
+
+Wickham, Hadley. 2016. *Ggplot2: Elegant Graphics for Data Analysis*.
+Springer-Verlag New York. <https://ggplot2.tidyverse.org>.
+
+</div>
+
 <div id="ref-R-tidyverse" class="csl-entry">
 
-Wickham, Hadley. 2021. *Tidyverse: Easily Install and Load the
-Tidyverse*. <https://CRAN.R-project.org/package=tidyverse>.
+———. 2021. *Tidyverse: Easily Install and Load the Tidyverse*.
+<https://CRAN.R-project.org/package=tidyverse>.
 
 </div>
 
@@ -154,6 +180,23 @@ Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy
 D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019.
 “Welcome to the <span class="nocase">tidyverse</span>.” *Journal of Open
 Source Software* 4 (43): 1686. <https://doi.org/10.21105/joss.01686>.
+
+</div>
+
+<div id="ref-R-ggplot2" class="csl-entry">
+
+Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen,
+Kohske Takahashi, Claus Wilke, Kara Woo, Hiroaki Yutani, and Dewey
+Dunnington. 2021. *Ggplot2: Create Elegant Data Visualisations Using the
+Grammar of Graphics*. <https://CRAN.R-project.org/package=ggplot2>.
+
+</div>
+
+<div id="ref-R-dplyr" class="csl-entry">
+
+Wickham, Hadley, Romain François, Lionel Henry, and Kirill Müller. 2021.
+*Dplyr: A Grammar of Data Manipulation*.
+<https://CRAN.R-project.org/package=dplyr>.
 
 </div>
 
