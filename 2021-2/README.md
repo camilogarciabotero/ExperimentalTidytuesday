@@ -15,58 +15,15 @@ tuesdata <- tidytuesdayR::tt_load(2021, week = 44)
     ##  Downloading file 1 of 2: `ultra_rankings.csv`
     ##  Downloading file 2 of 2: `race.csv`
 
-<<<<<<< HEAD
 ``` r
-rankings <-  tuesdata$ultra_rankings
+rankings <- tuesdata$ultra_rankings
 ```
 
-=======
->>>>>>> SuevonHumboldt28-main
 Estudiantes:
 
 ## Alexandra
 
 ``` r
-<<<<<<< HEAD
-=======
-#Holix4
-library(tidytuesdayR)
-library(report)
-```
-
-    ## Warning: package 'report' was built under R version 4.0.5
-
-``` r
-library(ggplot2)
-
-rankings <- tuesdata$ultra_rankings
-
-tuesdata$ultra_rankings
-```
-
-    ## # A tibble: 137,803 x 8
-    ##    race_year_id  rank runner     time     age gender nationality time_in_seconds
-    ##           <dbl> <dbl> <chr>      <chr>  <dbl> <chr>  <chr>                 <dbl>
-    ##  1        68140     1 VERHEUL J~ 26H 3~    30 M      GBR                   95725
-    ##  2        68140     2 MOULDING ~ 27H 0~    43 M      GBR                   97229
-    ##  3        68140     3 RICHARDSO~ 28H 4~    38 M      GBR                  103747
-    ##  4        68140     4 DYSON Fio~ 30H 5~    55 W      GBR                  111217
-    ##  5        68140     5 FRONTERAS~ 32H 4~    48 W      GBR                  117981
-    ##  6        68140     6 THOMAS Le~ 32H 4~    31 M      GBR                  118000
-    ##  7        68140     7 SHORT Deb~ 33H 3~    55 W      GBR                  120601
-    ##  8        68140     8 CROSSLEY ~ 33H 3~    40 W      GBR                  120803
-    ##  9        68140     9 BUTCHER K~ 34H 5~    47 M      GBR                  125656
-    ## 10        68140    10 Hendry Bi~ 34H 5~    29 M      GBR                  125979
-    ## # ... with 137,793 more rows
-
-``` r
-# Libraries
-library(ggplot2)
-library(dplyr)
-
-
-
->>>>>>> SuevonHumboldt28-main
 # Make the histogram
 rankings %>%
   filter( age<90 ) %>%
@@ -74,13 +31,7 @@ rankings %>%
     geom_density(fill="#69b3a2", color="#e9ecef", alpha=0.8)
 ```
 
-<<<<<<< HEAD
 <img src="README_files/figure-gfm/Alexandra-1.png" style="display: block; margin: auto;" />
-=======
-![](README_files/figure-gfm/Alexandra-1.png)<!-- -->
-
-\`\`\`
->>>>>>> SuevonHumboldt28-main
 
 ## Amalia
 
@@ -105,11 +56,7 @@ p + geom_point(aes(colour = factor(gender),shape =gender)) +
 
     ## Warning: Removed 17819 rows containing missing values (geom_point).
 
-<<<<<<< HEAD
 <img src="README_files/figure-gfm/Andres-1.png" style="display: block; margin: auto;" />
-=======
-![](README_files/figure-gfm/Andres-1.png)<!-- -->
->>>>>>> SuevonHumboldt28-main
 
 ## Manuela
 
@@ -190,6 +137,21 @@ library(tidytuesdayR)
 
 ## Susana
 
+``` r
+library(ggplot2)
+library(wesanderson)
+theme_set(theme_classic()) 
+# head(rankings)
+data_frame <- na.omit(rankings)
+# head(data_frame)
+p <- ggplot(data_frame, aes(x = age, fill = gender)) + 
+geom_density(alpha = 0.4) + scale_fill_manual(values = wes_palette("GrandBudapest2")) +
+labs(title = "Tidy Tuesday ", x = "Age", y = "Density") + theme(plot.title = element_text(size = 14, face = "bold")) + theme(plot.title = element_text(hjust = 0.5))
+p
+```
+
+<img src="README_files/figure-gfm/Susana-1.png" style="display: block; margin: auto;" />
+
 # References
 
 <div id="refs" class="references csl-bib-body hanging-indent">
@@ -224,6 +186,13 @@ Improve Reproducibility and Methodological Best Practices Adoption.”
 Makowski, Dominique, Daniel Lüdecke, Mattan S. Ben-Shachar, and
 Indrajeet Patil. 2021. *Report: Automated Reporting of Results and
 Statistical Models*. <https://easystats.github.io/report/>.
+
+</div>
+
+<div id="ref-R-wesanderson" class="csl-entry">
+
+Ram, Karthik, and Hadley Wickham. 2018. *Wesanderson: A Wes Anderson
+Palette Generator*. <https://github.com/karthik/wesanderson>.
 
 </div>
 

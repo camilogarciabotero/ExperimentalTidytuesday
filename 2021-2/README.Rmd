@@ -18,12 +18,8 @@ library(tidyverse, warn.conflicts = FALSE)
 library(tidytuesdayR)
 
 tuesdata <- tidytuesdayR::tt_load(2021, week = 44)
-<<<<<<< HEAD
 
-rankings <-  tuesdata$ultra_rankings
-=======
 rankings <- tuesdata$ultra_rankings
->>>>>>> SuevonHumboldt28-main
 ```
  
  Estudiantes:
@@ -142,25 +138,18 @@ library(tidytuesdayR)
 
 ```{r Susana}
 
-install.packages("tidyverse")
-install.packages("wesanderson")
 
 library(ggplot2)
 library(wesanderson)
 theme_set(theme_classic()) 
-head(rankings)
+# head(rankings)
 data_frame <- na.omit(rankings)
-head(data_frame)
+# head(data_frame)
 p <- ggplot(data_frame, aes(x = age, fill = gender)) + 
 geom_density(alpha = 0.4) + scale_fill_manual(values = wes_palette("GrandBudapest2")) +
 labs(title = "Tidy Tuesday ", x = "Age", y = "Density") + theme(plot.title = element_text(size = 14, face = "bold")) + theme(plot.title = element_text(hjust = 0.5))
 p
 
-
-
-
-
-```
 ```
 
 # References
