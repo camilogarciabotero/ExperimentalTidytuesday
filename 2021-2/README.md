@@ -29,7 +29,7 @@ rankings <- tuesdata$ultra_rankings
 modified_rankings <- rankings %>%
   mutate(time_in_minutes = time_in_seconds / 60)
 
-ggplot(modified_rankings , aes(x = time_in_minutes , fill = gender)) + geom_density(data = modified_rankings , alpha = 0.6) + theme_minimal() + labs(x = "Time in minutes", y = "Gender") + theme( legend.position = "left" , legend.title = element_blank()) + ggtitle("Proggress of gender vs time") + scale_fill_d3()
+ggplot(modified_rankings , aes(x = time_in_minutes , fill = gender)) + geom_density(data = modified_rankings , alpha = 0.6) + theme_minimal() + labs(x = "Time in minutes", y = "Gender") + theme( legend.position = "left" , legend.title = element_blank()) + ggtitle("Proggress of gender vs time") + scale_fill_tron()
 ```
 
     ## Warning: Removed 17791 rows containing non-finite values (stat_density).
