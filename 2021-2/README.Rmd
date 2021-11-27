@@ -67,6 +67,16 @@ p + geom_point(aes(colour = factor(gender),shape =gender)) +
 ## Maria José
 
 ```{r MariaJose}
+library(ggplot2)
+library(dplyr)
+
+rankings <- tuesdata$ultra_ranking
+
+rankings_modified <-mutate(rankings, time_in_hours=time_in_seconds/3600)
+
+ggplot(rankings_modified, aes (x=age, y=time_in_hours,fill=gender))+
+  geom_violin()
+
 
 ```
 
