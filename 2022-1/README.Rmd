@@ -1,0 +1,138 @@
+---
+title: "TidyTuesdays from 2022-2 class"
+output: github_document
+bibliography: packages.bib
+nocite: "@*"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, fig.align = "center")
+
+knitr::write_bib(renv::dependencies()$Package, file = "packages.bib") # Line to write the all packages references in a file called packages.bib
+```
+
+The following code chunk have the essential libraries for the subsequent code.
+```{r libraries, warning=FALSE, message=FALSE}
+library(tidyverse, warn.conflicts = FALSE)
+library(tidytuesdayR)
+
+tuesdata <- tidytuesdayR::tt_load(2022, week = 18)
+
+power_capacity <-  tuesdata$capacity
+
+```
+ 
+```{r Ejemplo}
+
+ggplot(power_capacity, aes(y = type, x = total_gw, fill = type)) +
+  geom_jitter(aes(color = type)) +
+  geom_boxplot(alpha = 0.3) +
+  theme_minimal() +
+  theme(
+    legend.position = "none"
+  ) +
+  labs(
+    x = "Total energy (GW)",
+    y = "Energy source"
+  ) +
+  geom_label(data = filter(power_capacity, total_gw > 300), aes(label = year), nudge_x = 0.1, nudge_y = 0.2)
+
+```
+ 
+ 
+ Estudiantes:
+
+## Sara
+
+```{r Sara}
+#Write below here
+
+```
+
+
+## JJ. Botero
+
+```{r Botero}
+#Write below here
+
+```
+
+## Estefania
+
+```{r Estefania}
+# Write below here
+ 
+```
+
+## Eduardo
+
+```{r Manuela}
+# Write below here
+
+```
+
+## Juan Andres
+
+```{r Juan}
+# Write below here
+
+```
+
+## Juan Manuel
+
+```{r JuanMa}
+# Write below here
+
+```
+
+## Melissa
+
+```{r Melissa}
+# Write below here
+
+```
+
+## Sebastian
+
+```{r Sebastian}
+# Write below here
+
+```
+
+## JJ. Picon
+
+```{r Picon}
+# Write below here
+
+```
+
+## Alejandro
+
+```{r Alejandro}
+# Write below here
+
+```
+
+## Federico
+
+```{r Federico}
+# Write below here
+
+```
+
+## Camila
+
+```{r Camila}
+# Write below here
+
+```
+
+## Vanessa
+
+```{r Vanessa}
+# Write below here
+
+```
+
+
+# References
